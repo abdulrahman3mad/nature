@@ -2,9 +2,10 @@
 
 nav{
     color:$textColor;
-    z-index: 10;
+    z-index: 100000;
     width:100%;
     top:0;
+    
     @include mq_max(769){
         display: none;
     }
@@ -18,7 +19,6 @@ nav{
         li{    
             font-weight: 500;
             cursor: pointer;
-            border-right: 1px solid rgb(255, 255, 255);
             padding:10px 60px 10px 0;   
         }
         li:last-child{

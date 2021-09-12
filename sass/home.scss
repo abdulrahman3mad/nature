@@ -4,7 +4,8 @@
 
 
 body{
-    height:7000px !important;
+    height:5500px !important;
+    background-color:rgb(250, 250, 250)
 }
 
 .seeAnotherSection{
@@ -67,11 +68,15 @@ body{
     width:100vw;
     overflow: hidden;
     h1{
-        color:$mainColor2;
+        color:rgb(114, 114, 114);
         font-size:2rem;
+    }
+    hr{
+        margin:auto;
     }
     p{
         color:$textColor;
+        margin-bottom:5px;
         padding-top:8px
     }
     .items{
@@ -79,30 +84,45 @@ body{
         margin-top:30px;
         overflow: hidden;
         i{
-            margin:100px 150px;
+            margin:120px 0;
             @include mq_max(769){
                 margin:100px 40px;
             }
-            &.fa-arrow-left{
-                display: none
+            &.fa-arrow-circle-right{
+                margin:130px 10px;
+            }
+            &.fa-arrow-circle-left{
+                display: none;
+                margin:130px 10px !important;
             }
         }
         .itemsContainer{
             display: flex;
             overflow: hidden;
             width: max-content;
+            height:300px;
             margin:0 auto;
             transition: all 0.5s ease-in-out;
-            background-color:rgb(251, 251, 251);
+            background-color:rgb(248, 248, 248);
             .item{
                 width:250px;
-                margin: 0 20px; 
+                margin: auto 20px; 
+                max-height:250px;
                 cursor: pointer;
                 text-align: left ;
+                background-color:white;
                 overflow:hidden;
-                border:1px solid grey;
+                
+                &:hover{
+                    transform: translateY(-10px);
+                    box-shadow: 8px 8px 20px rgb(206, 206, 206), -1px -1px 20px rgb(206, 206, 206);
+                }
+                
                 img{
                     max-width:100%;
+                    &:hover{
+                        transform: scale(1.1, 1.1);     
+                    }
                     object-fit: fill;
                 }
                 .text{
@@ -151,7 +171,7 @@ body{
             text-align: center;
         }
         h1{
-            color:$mainColor2;
+            color:rgb(114, 114, 114);
             font-size:1.7rem;
             margin-bottom:10px;
         }
@@ -180,7 +200,8 @@ body{
 
 .rightDecision{
     margin-top:150px;
-    padding:0 100px;
+    background-color:white;
+    padding:50px 100px;
     .content{
         display: flex;
         align-items: center;
@@ -198,7 +219,7 @@ body{
             }
             h1{
                 font-size:1.7rem;
-                color:$mainColor2;
+                color:rgb(114, 114, 114);
             }
             hr{
                 margin:5px 0 25px 0;
@@ -233,6 +254,7 @@ body{
     }
     h1{
         font-size:1.7rem;
+        color:rgb(114, 114, 114);
     }
     hr{
         margin:5px auto 25px;
@@ -250,18 +272,14 @@ body{
     overflow: hidden;
     h1{
         font-size:1.7rem;
+        color:rgb(114, 114, 114);
     }
     hr{
         margin:5px auto 25px;
     }
     i{
         margin:110px 0;
-        &.fa-arrow-right{
-            margin-right:10px;
-        }
-        &.fa-arrow-left{
-            margin-left:10px;
-        }
+      
     }
     .items{
         overflow: hidden;
@@ -288,7 +306,7 @@ body{
         justify-content: center;
     }
     h2{
-        color:$mainColor2;
+        color:rgb(114, 114, 114);
         @include mq_max(769){
             font-size:1.2rem
         }
@@ -302,7 +320,12 @@ body{
             padding:0;
         }
         .newsItem{
-            border:2px solid $mainColor2;
+            margin-bottom: 30px;
+            cursor: pointer;
+            box-shadow:5px 5px 10px rgb(221, 221, 221);
+            &:hover{
+                transform: scale(1.005, 1.005);
+            }
             img{
                 max-width: 100%;
                 object-fit: cover;
@@ -325,12 +348,18 @@ body{
             margin-top:50px;
         }
         .personTalk{
+            cursor: pointer;
             padding:20px;
-            border:2px solid $mainColor2;
             width:450px;
+            margin-bottom:30px;
+            box-shadow:5px 5px 10px rgb(221, 221, 221);
+            &:hover{
+                transform: scale(1.005, 1.005);
+            }
             @include mq_max(769){
                 width: inherit;
             }
+            
             .personInfo{
                 display: flex;
                 align-items: center;

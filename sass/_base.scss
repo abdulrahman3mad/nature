@@ -70,10 +70,10 @@ i.listArrow{
     bottom:0;
     cursor: pointer;
     z-index: 100;
-    &.fa-arrow-right{
+    &.fa-arrow-circle-right{
         right:0;
     }
-    &.fa-arrow-left{
+    &.fa-arrow-circle-left{
         left:0;
     }
 }
