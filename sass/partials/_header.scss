@@ -1,0 +1,121 @@
+@import "../base";
+
+
+header{
+    padding:10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+        img{
+            width:80px;
+            cursor: pointer;
+            @include mq_max(769){
+                width:70px;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img{
+            width:35px;
+            height:35px;
+            object-fit:cover;
+            margin-right:25px;
+            border-radius: 50%;
+        }
+        .listBar{
+            width:10px;
+            font-size:1.4rem;
+            color:$mainColor2;
+            @include mq_min(769){
+                display: none;
+            }
+        }
+    }
+    .headerPopdownList{
+        position: absolute;
+        top:68px;
+        width:100vw;
+        left:0;
+        display: none;
+        
+
+        .listContainer{
+            padding:20px 45px;
+            border-top:1px solid rgb(168, 168, 168);
+            display: flex;
+            color:$textColor;
+            justify-content: space-around;
+            li{
+                margin-bottom:20px;
+            }    
+            div{     
+                div{
+                    display: flex    
+                }   
+            }
+        }
+        background-color:white;
+    }
+}
+
+
+.langContainer{
+    display: flex;
+    &.bigScreens{
+        @include mq_max(769){
+            display: none;
+        }
+    }
+}
+.lang{
+    width:15px;
+    height:15px;
+    font-size:0.8rem;
+    border:1px solid grey;
+    border-radius: 50%;
+    padding:3px;
+    margin:0 5px;
+    cursor: pointer;
+    &:hover{
+        background-color:rgb(241, 241, 241);
+    }
+}
+form{
+    &.bigScreens{
+        @include mq_max(769){
+            display: none;
+        }
+    }
+    padding-left:10px;
+    @include mq_min(769){
+        padding:0 20px 0 10px;
+    }
+    
+    input{
+        outline: none;
+        padding:5px;
+        width:150px;
+        border:1px solid grey;
+        border-radius: 5px;
+        @include mq_min(769){
+            &:focus{
+                width:250px;
+            }
+        }
+    }
+    i.fa-search{
+        position: relative;
+        right:30px;
+        display: none;
+        color:grey;
+        cursor: pointer;
+        
+        &:hover{
+            color:$mainColor1
+        }
+    }
+}

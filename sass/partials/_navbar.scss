@@ -1,0 +1,62 @@
+@import "../base";
+
+nav{
+    color:$textColor;
+    z-index: 10;
+    width:100%;
+    top:0;
+    @include mq_max(769){
+        display: none;
+    }
+    ul{
+        padding:0 50px;
+        display: flex;
+        justify-content: space-between;
+        border:1px solid $mainColor1;
+        border-bottom: none;
+        background-color:$mainColor1;
+        li{    
+            font-weight: 500;
+            cursor: pointer;
+            border-right: 1px solid rgb(255, 255, 255);
+            padding:10px 60px 10px 0;   
+        }
+        li:last-child{
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+    .popdownList{
+        position: absolute;
+        display: none;
+        ul{
+            display: flex;
+            flex-direction: column;
+            padding:10px 0;
+            font-size:0.8rem;
+            color:$textColor;
+            border:none;
+            background-color:rgb(250, 250, 250);
+            box-shadow: 0 1px 3px rgb(112, 112, 112);
+            li{
+               padding:15px 100px 15px 20px; 
+                &:hover{
+                    background-color:rgb(238, 238, 238)
+                }
+            }
+        }
+        &.dealsList{
+            left:10px;
+        }
+        &.communityList{
+            left:153px;
+        }
+        &.partnersList{
+            left:745px
+        }
+        &.supportusList{
+            left:928px
+        }
+    }
+}
+
