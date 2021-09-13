@@ -5,29 +5,31 @@ const partnersRightArrow = document.querySelector(".partnersRightArrow")
 
 rightArrows.forEach(rightArrow=>{
     rightArrow.addEventListener("click", ()=>{
-        const distance = rightArrow.previousElementSibling.getBoundingClientRect().x + 20;
+        const distance = rightArrow.previousElementSibling.getBoundingClientRect().x;
         rightArrow.previousElementSibling.previousElementSibling.style.display = "block"
-        rightArrow.previousElementSibling.style.transform = `translateX(${distance - 310}px)`
+        if(distance-1 > (-290*Math.floor(rightArrow.previousElementSibling.children.length-4))){
+            rightArrow.previousElementSibling.style.transform = `translateX(${distance - 290}px)`
+        }
     })  
 })
 
 leftArrows.forEach(leftArrow=>{
     leftArrow.addEventListener("click", ()=>{
-        const distance = leftArrow.nextElementSibling.getBoundingClientRect().x - 20 ;
-        if(distance+20<0){
-            leftArrow.nextElementSibling.style.transform = `translateX(${distance + 310}px)`
+        const distance = leftArrow.nextElementSibling.getBoundingClientRect().x ;
+        if(distance < 0){
+            leftArrow.nextElementSibling.style.transform = `translateX(${distance + 290}px)`
         }
     })
 })
 
 partnersLeftArrow.addEventListener("click", ()=>{
     const distance = partnersLeftArrow.nextElementSibling.getBoundingClientRect().x
-    partnersLeftArrow.nextElementSibling.style.transform = `translateX(${distance + 200}px)`
+    partnersLeftArrow.nextElementSibling.style.transform = `translateX(${distance + 186}px)`
 })
 
 partnersRightArrow.addEventListener("click", ()=>{
     const distance = partnersRightArrow.previousElementSibling.getBoundingClientRect().x
-    partnersRightArrow.previousElementSibling.style.transform = `translateX(${distance - 200}px)`
+    partnersRightArrow.previousElementSibling.style.transform = `translateX(${distance - 186}px)`
 })
 
 
