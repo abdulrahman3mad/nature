@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="left">
-            <img src="images/logo.png">
+            <a href="home.html"><img src="images/logo.png"></a>
         </div>
         <div class="right">
             <div class="langContainer bigScreens">
@@ -29,10 +29,10 @@
             <div class="listContainer">
                 <div>
                     <ul>
-                        <li>Deals</li>
-                        <li>Community</li>
-                        <li>Blogs&Articles</li>
-                        <li>News</li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href=#>Community</a></li>
+                        <li><a href=#>Blogs&Articles</a></li>
+                        <li class="news"><a href=#>News</a></li>
                     </ul>
                     <div>
                         <div class="langContainer">
@@ -46,12 +46,11 @@
                     </div>
                 </div>
                 <ul>
-                    <li>Partners</li>
-                    <li>Support Us</li>
-                    <li>About Us</li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Support Us</a></li>
+                    <li><a href="#">About Us</a></li>
                 </ul>
             </div>
-         
         </div>
     </header>
     <nav id="navBar">
@@ -59,37 +58,37 @@
             <li class="listItem" data-listType="deals">Deals</li>
             <li class="listItem" data-listType="community">Community</li>
             <li>Blogs&Articles</li>
-            <li>News</li>
+            <li class="news">News</li>
             <li class="listItem" data-listType="partners">Partners</li>
             <li class="listItem" data-listType="supportus">Support us</li>
             <li>About us</li>
         </ul>
         <div class="popdownList dealsList" id="deals">
             <ul>
-                <li>Energy & Utilities</li>
-                <li>Clothing</li>
-                <li>Food</li>
-                <li>Travel</li>
-                <li>House installation</li>
-                <li>High Performance Homes</li>
+                <li><a href="#">Energy & Utilities</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">House installation</a></li>
+                <li><a href="#">High Performance Homes</a></li>
             </ul>
         </div>
         <div class="popdownList communityList" id="community">
             <ul>
-                <li>Events & Workshops</li>
-                <li>Inspirations</li>
+                <li><a href="#">Events & Workshops</a></li>
+                <li><a href="#">Inspirations</a></li>
             </ul>
         </div>
         <div class="popdownList partnersList" id="partners">
             <ul>
-                <li>Business Partners</li>
-                <li>Organizations & Communities</li>
+                <li><a href="#">Business Partners</a></li>
+                <li><a href="#">Organizations & Communities</a></li>
             </ul>
         </div>
         <div class="popdownList supportusList" id="supportus">
             <ul>
-                <li>Ambassadors/ Volunteers</li>
-                <li>Become a donor</li>
+                <li><a href="#">Ambassadors/ Volunteers</a></li>
+                <li><a href="#">Become a donor</a></li>
             </ul>
         </div>
     </nav>
@@ -315,15 +314,19 @@
     <section class="partners">
         <h1>Our partners</h1>
         <hr>
-        <i class="fas fa-arrow-circle-left leftArrow listArrow"></i>
-        <div class="items">
+        <i class="fas fa-arrow-circle-left partnersLeftArrow listArrow"></i>
+        <div class="items partnersItems">
+            <img src="images/icons8-apex-legends-160.png">
+            <img src="images/icons8-doom-logo-160.png">
+            <img src="images/icons8-doom-logo-160.png">
+            <img src="images/icons8-doom-logo-160.png">
+            <img src="images/icons8-doom-logo-160.png">
+            <img src="images/icons8-uplay-160.png">
             <img src="images/item.png">
-            <img src="images/item.png">
-            <img src="images/item.png">
-            <img src="images/item.png">
-            <img src="images/item.png">
+            <img src="images/icons8-apex-legends-160.png">
+            <img src="images/icons8-doom-logo-160.png">
         </div>
-        <i class="fas fa-arrow-circle-right leftArrow listArrow"></i>
+        <i class="fas fa-arrow-circle-right partnersRightArrow listArrow"></i>
     </section>
     <section class="peopleOpinions">
         <div class="left">
@@ -387,87 +390,7 @@
     </section>
     <footer>
     </footer>
-    <script>
-        const downArrows = document.querySelectorAll(".downArrow")
-        downArrows.forEach(arrow => {
-            arrow.addEventListener("click", () => {
-                window.scrollTo({
-                    top:document.querySelector("." + arrow.dataset.sec).offsetTop,
-                    behavior:"smooth"
-                })
-           })
-        });
-
-        const leftArrow = document.querySelector(".leftArrow")
-        const rightArrow = document.querySelector(".rightArrow")
-        const list = document.querySelector(".itemsContainer")
-        const contactBar = document.getElementById("contactBar")
-        const contactForm = document.getElementById("contactForm")
-        const closeIcon = document.getElementById("closeIcon")
-
-        
-
-        rightArrow.addEventListener("click", ()=>{
-            const distance = list.getBoundingClientRect().x + 20;
-            leftArrow.style.display = "block"
-            list.style.transform = `translateX(${distance - 310}px)`
-        })
-
-        leftArrow.addEventListener("click", ()=>{
-            const distance = list.getBoundingClientRect().x - 20 ;
-            if(distance+20<0){
-                list.style.transform = `translateX(${distance + 310}px)`
-            }
-        });
-
-        contactBar.addEventListener("click", ()=>{
-            contactForm.classList.add("translateForm")
-        });
-
-
-        closeIcon.addEventListener("click", ()=>{
-            contactForm.classList.remove("translateForm")
-        })
-
-        const listTypes = document.querySelectorAll(".popdownList")
-        const navbarLists = document.querySelectorAll(".listItem")
-        
-        navbarLists.forEach(listItem=>{
-            listItem.addEventListener("mouseenter", ()=>{
-                document.getElementById(listItem.dataset.listtype).style.display ="block"
-            })
-            listItem.addEventListener("mouseleave", ()=>{
-                document.getElementById(listItem.dataset.listtype).style.display ="none"
-            })
-        })
-
-        listTypes.forEach(listType=>{
-            listType.addEventListener("mouseenter", ()=>{
-                listType.style.display = "block"
-            })
-            listType.addEventListener("mouseleave", ()=>{
-                listType.style.display = "none"
-            })
-        })
-        
-        const listBar = document.querySelector(".listBar")
-        const headerPopDownList = document.querySelector(".headerPopdownList")
-        listBar.addEventListener("click", ()=>{
-            if(headerPopDownList.style.display == "none"){
-                headerPopDownList.style.display = "block"
-            }else{
-                headerPopDownList.style.display = "none"
-            }
-        });
-
-      const nav = document.getElementById("navBar")
-      window.addEventListener("scroll", ()=>{
-          if(window.pageYOffset > 0){
-              nav.style.position = "fixed"
-          }else{
-              nav.style.position = "static"
-          }
-      })
-    </script>
+    <script src="public/js/main.js"></script>
+    <script src="public/js/navbar.js"></script>
 </body>
 </html>

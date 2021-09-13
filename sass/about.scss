@@ -1,0 +1,217 @@
+@import "partials/header";
+@import "partials/navbar";
+
+
+
+body{
+    background-color:rgb(250, 250, 250);
+    height:4000px;
+}
+
+hr{
+    margin-bottom:20px !important;
+}
+h1, h2, h3, h4{
+    color:rgb(114, 114, 114);
+    margin-bottom: 10px;
+}
+
+.heroArea{
+    margin-top:150px;
+    padding:50px 100px;
+    @include mq_max(769){
+        margin-top:50px;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        @include mq_max(769){
+            flex-direction: column-reverse;
+        }
+    }
+    .left{
+        @include mq_max(769){
+            width:100vw;
+            text-align: center;            
+            margin-top:40px;
+        }
+        h2{
+            font-size:1.7rem;
+            @include mq_max(769){
+                font-size:1.5rem;
+            }
+        }
+        hr{
+            @include mq_max(769){
+                margin:auto;
+            }
+        }
+        p{
+            line-height: 1.9;
+            font-size:0.9rem;
+            color:$textColor;
+            margin-top:20px
+        }
+    }
+    .right{
+        img{
+            border:3px solid rgb(255, 151, 31);
+            padding:5px;
+            box-shadow: 3px 7px 8px rgb(224, 224, 224);
+            width:400px;
+            @include mq_max(769){
+                width:300px;
+            }
+        }
+    }
+}
+
+.visionPlusMission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 120px 0;
+    padding:0 100px;
+    @include mq_max(769){
+        flex-direction: column;
+        padding:0 50px;
+    }
+    .left{
+        @include mq_max(769){
+            margin-bottom:100px;
+        }   
+    }
+    h2{
+        font-size:1.7rem;
+        @include mq_max(769){
+            font-size:1.5rem;
+        }  
+    }
+    hr{
+        margin:0 auto 20px !important;
+    }    
+    p{
+        width:70%;
+        font-size:0.9rem;
+        @include mq_max(769){
+            width:100%;
+        }
+        margin:auto;
+    }
+}
+
+.team{
+    text-align: center;
+    padding:0 100px;
+    @include mq_max(769){
+        padding:0;
+    }
+    margin:250px 0;
+    h1{
+        font-size:2rem;
+        @include mq_max(769){
+            font-size:1.7rem
+        }
+    }
+    span{
+        color:$mainColor2
+    }
+    hr{
+        margin:0 auto 80px !important;
+    }
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include mq_max(769){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        grid-gap: 100px;
+        h4{
+            margin-bottom:5px;
+            color:rgb(114, 114, 114); 
+        }
+        img{
+            width:65px;
+            height:65px;   
+            object-fit: cover;
+            border-radius: 50%;
+            &:hover{
+                transform: scale(1.1, 1.1);
+            }
+        }
+        p{
+            margin-bottom:5px;
+            width:80%; 
+            margin:auto;
+            @include mq_max(769){
+                width:100%;
+            }
+        }
+        i{
+            margin-top:10px;
+            font-size:1.4rem;
+            color:#428DE4;
+            cursor: pointer;   
+        }
+    }
+}
+
+.awards{
+    text-align: center;
+    padding:0 100px;
+    margin: 250px 0;
+    h1{
+        font-size:2rem;
+        color:$mainColor2
+    }
+    hr{
+        margin:auto;
+    }
+    i{
+        font-size:3rem;
+        color:$mainColor1
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top:100px;
+        article{         
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom:100px;
+            @include mq_max(769){
+                flex-direction: column-reverse;
+            }
+            .left{
+               width:50%;
+               @include mq_max(769){
+                    width:100%;
+                    margin-top:40px;
+                }
+               p{
+                    width:80%;
+                    margin:auto;
+                    @include mq_max(769){
+                        width:70%;
+                    }
+               }
+            }
+            .right{
+                width:50%;
+                overflow: hidden;
+                @include mq_max(769){
+                    max-width:100%;
+                }
+                img{
+                    margin: auto;
+                    width:500px;
+                }
+            }
+            
+        }
+    }
+}
