@@ -1,0 +1,19 @@
+{
+  "name": "freelancering-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulrahman3mad/nature.git"
+  },
+  "author": "Abdulrahman Emad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulrahman3mad/nature/issues"
+  },
+  "homepage": "https://github.com/abdulrahman3mad/nature#readme"
+}
