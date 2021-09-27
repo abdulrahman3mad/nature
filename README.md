@@ -1,6 +1,11 @@
 # nature
-You can check it here 
+made using:
+HTML5
+CSS/CSS3
+Javascript
+Sass
 
+You can check it here 
 ## Home page
 https://abdulrahman3mad.github.io/nature/
 
