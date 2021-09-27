@@ -41,6 +41,7 @@ contactBar.addEventListener("click", ()=>{
     contactForm.classList.add("translateForm")
 });
 
+
 closeIcon.addEventListener("click", ()=>{
     contactForm.classList.remove("translateForm")
 })

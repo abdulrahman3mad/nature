@@ -28,11 +28,13 @@ body{
     flex-direction: column;
     justify-content: center;
     padding:0 60px;
+    text-align: center;
     @include mq_max(769){
         padding:0;
         text-align: center;
     }
     .text{
+        text-align: left;
         padding: 0 20px;
         h1{
             color:white !important;
@@ -53,10 +55,6 @@ body{
         }
     }
     .seeAnotherSection{
-        position: absolute;
-        margin:auto;
-        left:630px;
-        top:470px;
         color:white;
     }
 }
@@ -101,7 +99,6 @@ body{
             overflow: hidden;
             width: max-content;
             height:300px;
-            margin:0 auto;
             transition: all 0.5s ease-in-out;
             background-color:rgb(248, 248, 248);
             .item{
@@ -307,7 +304,6 @@ body{
         justify-content: center;
         
         img{
-            width:100px;
             height:110px;
             border:3px solid $mainColor1;
             border-radius: 15px;
@@ -400,7 +396,7 @@ body{
 
 .contactBar{
     background-color:$mainColor2;
-    width:150px;
+    width:200px;
     padding:7px 40px;
     color:white;
     font-size:1.2rem;
@@ -424,24 +420,25 @@ body{
 
 .contactForm{
     position: fixed;
-    width:400px;
     height:100vh;
     border:1px solid rgb(216, 216, 216);
-    right:-500px;
+    right:-700px;
+    width:400px;
     transition: all 1s ease-in-out;
     top:0;
     z-index: 10000;
     @include mq_max(769){
+        width:100%;
         &.translateForm{
             right:0;
+            left:0;
             margin: 0 0;
-            max-width:100vw;
         }
     }
 
     @include mq_min(769){
         &.translateForm{
-            transform: translateX(-500px);
+            transform: translateX(-700px);
         }
     }
     background-color:white;
@@ -466,6 +463,7 @@ body{
         font-size:0.8rem;
     }
     form{
+        padding:0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -484,15 +482,15 @@ body{
         }
         button{
             background-color:$mainColor2;
-            padding:8px;
+            padding:4px 8px;
             font-weight: bold;
-            font-size:1.2rem;
+            font-size:1.1rem;
             border-radius: 10px;
             margin-top:15px;
             border:none;
             color:white;
             cursor: pointer;
-            width:200px
+            width:100%
         }
     }
 }

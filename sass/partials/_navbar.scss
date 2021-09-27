@@ -5,12 +5,13 @@ nav{
     z-index: 100000;
     width:100%;
     top:0;
+    height:39px;
     
     @include mq_max(769){
         display: none;
     }
-    ul{
-        padding:0 50px;
+    ul.mainList{
+        padding:0 40px;
         display: flex;
         justify-content: space-between;
         border:1px solid $mainColor1;
@@ -19,7 +20,10 @@ nav{
         li{    
             font-weight: 500;
             cursor: pointer;
-            padding:10px 60px 10px 0;  
+            &:hover{
+                background-color:#fbb040;
+            }
+            padding:10px 5px;
         }
         li:last-child{
             padding-right: 0;
@@ -29,34 +33,28 @@ nav{
     .popdownList{
         position: absolute;
         display: none;
+        width:max-content;
+        top:113px;
         ul{
+            cursor: pointer;
+            font-weight: 500;
             display: flex;
             flex-direction: column;
-            padding:10px 0;
+            background-color:rgb(250, 250, 250);
             font-size:0.8rem;
             color:$textColor;
             border:none;
-            background-color:rgb(250, 250, 250);
+            padding:10px 0;
             box-shadow: 0 1px 3px rgb(112, 112, 112);
             li{
                padding:15px 100px 15px 20px; 
+               max-width: 100%;
                 &:hover{
                     background-color:rgb(238, 238, 238)
                 }
             }
         }
-        &.dealsList{
-            left:10px;
-        }
-        &.communityList{
-            left:153px;
-        }
-        &.partnersList{
-            left:745px
-        }
-        &.supportusList{
-            left:928px
-        }
+   
     }
 }
 
